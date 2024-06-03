@@ -1,6 +1,6 @@
-package com.example.client_register_api.repository;
+package com.example.clientapi.repository;
 
-import com.example.client_register_api.entity.Client;
+import com.example.clientapi.entity.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

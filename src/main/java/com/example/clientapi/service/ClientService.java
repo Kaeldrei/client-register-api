@@ -1,25 +1,24 @@
-package com.example.client_register_api.service;
+package com.example.clientapi.service;
 
-import com.example.client_register_api.entity.Client;
-import com.example.client_register_api.exception.ApiException;
-import com.example.client_register_api.factory.ClientFactory;
-import com.example.client_register_api.repository.ClientRepository;
-import com.example.client_register_api.request.ClientRequestDto;
+import com.example.clientapi.entity.Client;
+import com.example.clientapi.exception.ApiException;
+import com.example.clientapi.factory.ClientFactory;
+import com.example.clientapi.repository.ClientRepository;
+import com.example.clientapi.request.ClientRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.springframework.http.HttpStatus.*;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
 @RequiredArgsConstructor
 public class ClientService {
 
-    private ClientFactory clientFactory;
-    private ClientRepository clientRepository;
+    private final ClientFactory clientFactory;
+    private final ClientRepository clientRepository;
 
     public Client saveClient(ClientRequestDto clientRequestDto){
         Client client = clientFactory.buildClient(clientRequestDto);

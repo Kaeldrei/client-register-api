@@ -1,4 +1,4 @@
-package com.example.client_register_api;
+package com.example.clientapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

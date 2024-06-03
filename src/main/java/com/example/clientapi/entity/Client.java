@@ -1,4 +1,4 @@
-package com.example.client_register_api.entity;
+package com.example.clientapi.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,4 +1,4 @@
-package com.example.client_register_api.utils;
+package com.example.clientapi.utils;
 
 import org.springframework.stereotype.Component;
 

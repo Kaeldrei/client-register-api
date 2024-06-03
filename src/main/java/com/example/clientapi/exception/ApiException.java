@@ -1,4 +1,4 @@
-package com.example.client_register_api.exception;
+package com.example.clientapi.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;

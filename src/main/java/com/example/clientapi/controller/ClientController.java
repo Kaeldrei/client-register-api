@@ -1,9 +1,9 @@
-package com.example.client_register_api.controller;
+package com.example.clientapi.controller;
 
-import com.example.client_register_api.controller.swagger.ClientSwagger;
-import com.example.client_register_api.entity.Client;
-import com.example.client_register_api.request.ClientRequestDto;
-import com.example.client_register_api.service.ClientService;
+import com.example.clientapi.controller.swagger.ClientSwagger;
+import com.example.clientapi.entity.Client;
+import com.example.clientapi.request.ClientRequestDto;
+import com.example.clientapi.service.ClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,9 +19,9 @@ public class ClientController implements ClientSwagger {
     private final ClientService clientService;
 
     @PostMapping("/register")
-    public ResponseEntity<Void> saveClientController(ClientRequestDto clientRequestDto){
-        clientService.saveClient(clientRequestDto);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+    public ResponseEntity<Client> saveClientController(ClientRequestDto clientRequestDto){
+        Client client = clientService.saveClient(clientRequestDto);
+        return new ResponseEntity<>(client, HttpStatus.CREATED);
     }
 
     @GetMapping
@@ -30,7 +30,7 @@ public class ClientController implements ClientSwagger {
         return new ResponseEntity<>(clientList, HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<Client> findById(long id){
         Client client = clientService.findById(id);
         return new ResponseEntity<>(client, HttpStatus.OK);

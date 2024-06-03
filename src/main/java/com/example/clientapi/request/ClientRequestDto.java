@@ -1,4 +1,4 @@
-package com.example.client_register_api.request;
+package com.example.clientapi.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;

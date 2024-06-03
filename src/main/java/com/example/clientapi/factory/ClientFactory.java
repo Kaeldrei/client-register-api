@@ -1,11 +1,11 @@
-package com.example.client_register_api.factory;
+package com.example.clientapi.factory;
 
-import com.example.client_register_api.entity.Client;
-import com.example.client_register_api.request.ClientRequestDto;
+import com.example.clientapi.entity.Client;
+import com.example.clientapi.request.ClientRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import static com.example.client_register_api.utils.DateUtils.parseToLocalDate;
+import static com.example.clientapi.utils.DateUtils.parseToLocalDate;
 
 @Component
 @RequiredArgsConstructor

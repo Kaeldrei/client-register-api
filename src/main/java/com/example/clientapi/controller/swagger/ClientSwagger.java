@@ -1,7 +1,7 @@
-package com.example.client_register_api.controller.swagger;
+package com.example.clientapi.controller.swagger;
 
-import com.example.client_register_api.entity.Client;
-import com.example.client_register_api.request.ClientRequestDto;
+import com.example.clientapi.entity.Client;
+import com.example.clientapi.request.ClientRequestDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -30,7 +30,7 @@ public interface ClientSwagger {
             @ApiResponse(description = "Internal Server Error",
                     responseCode = "500",
                     content = @Content(mediaType = "application/json"))})
-    ResponseEntity<Void> saveClientController(@RequestBody ClientRequestDto clientRequestDto);
+    ResponseEntity<Client> saveClientController(@RequestBody ClientRequestDto clientRequestDto);
 
     @Operation(summary = "Find All Clients")
     @ApiResponses(value = {
